@@ -1,5 +1,7 @@
 # Cadence — storefront
 
+**Live: https://theemprex.github.io/cadence-storefront/**
+
 A real multi-page static store. No build step, no dependencies, no framework.
 
 ## Run it
