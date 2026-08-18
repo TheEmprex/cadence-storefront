@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batch test results — every lot, published | Cadence</title>
+<meta name="description" content="Independent US-lab heavy-metal screening on every production lot, published against the batch number on your box, plus the creatine impurity assay.">
+<script>window.CADENCE_ROOT="../";</script>
+<link rel="stylesheet" href="../assets/css/store.css">
+<script src="../assets/js/store.js" defer></script>
+<script src="../assets/js/content.js" defer></script>
+<script src="../assets/js/pages.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main id="main" data-page="content">
+  <div class="band"><div class="inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="standards.html">Standards</a></li>
+      <li><span aria-current="page">Test results</span></li>
+    </ol></nav>
+
+    <header class="pagehead">
+      <p class="eyebrow">Test results</p>
+      <h1 class="serif">Find your batch. Read its certificate.</h1>
+      <p class="lede">The lot code is printed on the bottom of your box. Match it to a row below and you are
+        looking at the paperwork for the exact production run in your cupboard — not a representative sample, not
+        last year's, not the one the manufacturer picked.</p>
+    </header>
+  </div></div>
+
+  <section class="blk band">
+    <div class="inner">
+      <p class="placeholder"><b>Mockup note</b><br>The rows below are sample data with synthetic lot codes,
+        shown to demonstrate the layout. They are not genuine laboratory results and must be replaced with real
+        certificates from the contract lab before this page is published.</p>
+
+      <div class="row" style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:22px 0 20px">
+        <div class="field" style="gap:6px">
+          <label for="lot-filter">Filter by product</label>
+          <select class="select" id="lot-filter" style="width:auto;min-width:200px">
+            <option value="all">All products</option>
+            <option value="Build">Build</option>
+            <option value="Ease">Ease</option>
+            <option value="Flow">Flow</option>
+            <option value="Rest">Rest</option>
+            <option value="Intimate">Intimate</option>
+          </select>
+        </div>
+        <div class="field" style="gap:6px">
+          <label for="lot-search">Search a lot code</label>
+          <input class="input" id="lot-search" type="search" placeholder="e.g. BLD-2608-A" style="width:auto;min-width:220px">
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table" id="lot-table">
+          <caption>Heavy-metal screening, independent US laboratory. All figures in parts per million (ppm).
+            "&lt;LOQ" means below the limit of quantitation — present in an amount too small for the method to
+            measure.</caption>
+          <thead>
+            <tr><th>Product</th><th>Lot</th><th>Made</th><th class="n">Lead</th><th class="n">Cadmium</th>
+              <th class="n">Arsenic</th><th class="n">Mercury</th><th>Result</th><th>Certificate</th></tr>
+          </thead>
+          <tbody>
+            <tr data-p="Build"><th scope="row">Build</th><td class="mono">BLD-2608-A</td><td>Aug 2026</td>
+              <td class="n">&lt;LOQ</td><td class="n">&lt;LOQ</td><td class="n">0.012</td><td class="n">&lt;LOQ</td>
+              <td><span class="pill">Pass</span></td><td class="small">Sample — pending</td></tr>
+            <tr data-p="Build"><th scope="row">Build</th><td class="mono">BLD-2606-C</td><td>Jun 2026</td>
+              <td class="n">0.008</td><td class="n">&lt;LOQ</td><td class="n">0.015</td><td class="n">&lt;LOQ</td>
+              <td><span class="pill">Pass</span></td><td class="small">Sample — pending</td></tr>
+            <tr data-p="Ease"><th scope="row">Ease</th><td class="mono">ESE-2607-A</td><td>Jul 2026</td>
+              <td class="n">0.021</td><td class="n">0.009</td><td class="n">0.028</td><td class="n">&lt;LOQ</td>
+              <td><span class="pill">Pass</span></td><td class="small">Sample — pending</td></tr>
+            <tr data-p="Ease"><th scope="row">Ease</th><td class="mono">ESE-2605-B</td><td>May 2026</td>
+              <td class="n">0.018</td><td class="n">0.011</td><td class="n">0.031</td><td class="n">&lt;LOQ</td>
+              <td><span class="pill">Pass</span></td><td class="small">Sample — pending</td></tr>
+            <tr data-p="Flow"><th scope="row">Flow</th><td class="mono">FLW-2608-A</td><td>Aug 2026</td>
+              <td class="n">0.014</td><td class="n">&lt;LOQ</td><td class="n">0.019</td><td class="n">&lt;LOQ</td>
+              <td><span class="pill">Pass</span></td><td class="small">Sample — pending</td></tr>
+            <tr data-p="Rest"><th scope="row">Rest</th><td class="mono">RST-2607-B</td><td>Jul 2026</td>
+              <td class="n">0.010</td><td class="n">&lt;LOQ</td><td class="n">0.022</td><td class="n">&lt;LOQ</td>
+              <td><span class="pill">Pass</span></td><td class="small">Sample — pending</td></tr>
+            <tr data-p="Intimate"><th scope="row">Intimate</th><td class="mono">INT-2606-A</td><td>Jun 2026</td>
+              <td class="n">&lt;LOQ</td><td class="n">&lt;LOQ</td><td class="n">0.009</td><td class="n">&lt;LOQ</td>
+              <td><span class="pill">Pass</span></td><td class="small">Sample — pending</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small" id="lot-count" aria-live="polite" style="margin-top:12px"></p>
+    </div>
+  </section>
+
+  <section class="blk alt band">
+    <div class="inner narrow">
+      <div class="article">
+        <h2 class="serif">What a pass actually means</h2>
+        <p>Every lot is screened against the strictest limit that applies to it, which in practice is usually
+          California's Proposition 65 threshold for lead rather than a federal supplement limit — Prop 65 is
+          considerably tighter than the general standard, and a formula that clears it clears everything else.
+          A pass means the measured amount sits under that threshold, not that the result was zero.</p>
+        <p>Zero is not a realistic target and anyone promising it is selling you something. Plants take up trace
+          metals from soil, and minerals are mined from ground that contains other things. Every green vegetable
+          you have ever eaten carries a measurable amount of arsenic. The question worth asking is not whether a
+          number exists but whether anyone measured it, against what limit, and whether they will show you the
+          paper.</p>
+
+        <h2 class="serif">The creatine assay, which is separate</h2>
+        <p>Creatine monohydrate carries a specific risk that heavy-metal screening does not cover: the
+          manufacturing process can leave behind creatinine, dicyandiamide and dihydrotriazine, and it is the
+          most counterfeited raw material in sports nutrition. So Build gets its own third-party assay for those
+          three, on top of the standard panel.</p>
+        <p>We considered licensing a branded creatine instead. It costs roughly double, and because the counterfeit
+          problem attaches to the brand itself, buying the logo would have meant paying the premium and then
+          verifying it independently anyway. Testing our own and publishing the result was cheaper and produces a
+          document with our lot number on it, which is the more useful object.</p>
+
+        <h2 class="serif">Can't find your lot?</h2>
+        <p>Certificates go up within ten business days of a lot being released, so a very recent box may arrive
+          slightly ahead of its paperwork. If your code is not listed,
+          <a href="contact.html">send it to us</a> with your order number and we will send the certificate
+          directly.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script>
+(function () {
+  "use strict";
+  var sel = document.getElementById("lot-filter");
+  var search = document.getElementById("lot-search");
+  var rows = Array.prototype.slice.call(document.querySelectorAll("#lot-table tbody tr"));
+  var count = document.getElementById("lot-count");
+
+  function apply() {
+    var p = sel.value;
+    var q = search.value.trim().toLowerCase();
+    var shown = 0;
+    rows.forEach(function (r) {
+      var okP = p === "all" || r.getAttribute("data-p") === p;
+      var okQ = !q || r.textContent.toLowerCase().indexOf(q) !== -1;
+      var on = okP && okQ;
+      r.style.display = on ? "" : "none";
+      if (on) { shown++; }
+    });
+    count.textContent = shown === 1 ? "1 batch" : shown + " batches";
+  }
+
+  sel.addEventListener("change", apply);
+  search.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</body>
+</html>
