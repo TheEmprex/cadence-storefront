@@ -578,7 +578,27 @@
 
   /* ═══════════════════ boot ═══════════════════ */
 
+  /* Injected rather than added to every page: one place to change it. The four
+     bars are the four phase colours in cycle order. */
+  function setFavicon() {
+    if (document.querySelector('link[rel="icon"]')) { return; }
+    var svg =
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+      '<rect width="32" height="32" rx="7" fill="#1F1A18"/>' +
+      '<rect x="6"  y="8" width="4" height="16" rx="2" fill="#C4633C"/>' +
+      '<rect x="12" y="8" width="4" height="16" rx="2" fill="#8A9A7B"/>' +
+      '<rect x="18" y="8" width="4" height="16" rx="2" fill="#C48B94"/>' +
+      '<rect x="24" y="8" width="4" height="16" rx="2" fill="#A99BC4"/>' +
+      "</svg>";
+    var link = document.createElement("link");
+    link.rel = "icon";
+    link.type = "image/svg+xml";
+    link.href = "data:image/svg+xml," + encodeURIComponent(svg);
+    document.head.appendChild(link);
+  }
+
   function init() {
+    setFavicon();
     renderHeader();
     renderFooter();
     mountDrawer();
